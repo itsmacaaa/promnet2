@@ -1,0 +1,370 @@
+*{
+    margin: 1;
+    padding: 0;
+}
+
+#judul{
+    font-size: 40px;
+}
+
+p{
+    font-family: garamond;
+    font-size: x-large;
+}
+
+h2{
+    font-style: inherit;
+}
+
+nav{
+    background-color: rgb(237, 252, 186);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px rgba #edde0d;
+    gap: 15px;
+    font-size: 16px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 8px 6px;
+    border-radius: 15px;
+    box-shadow: 0 3px 2px rgb(232, 228, 209);
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(181, 26, 104);
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e8f6b6;
+}
+
+.header-img{
+    height: 500px;
+    margin: 20px auto;
+}
+
+body{
+    background-color: rgb(244, 187, 215);
+    color: rgb(152, 21, 97);
+    line-height: 1.6;
+    font-family: georgia;
+}
+
+.h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+h3{
+    font-family: georgia;
+    font-size: x-large;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+li{
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #e8f6b6;
+}
+
+.menu{
+    text-align: center;
+}
+
+nav{
+    display: inline-flex;
+    gap: 2px;
+
+    background: #efffba;
+    padding: 7px 6px;
+    border-radius: 13px;
+
+    box-shadow: 0 4px 10px rgba(140, 40, 90, 0.08);
+
+    animation: navAppear 1.3s ease;
+}
+
+nav a{
+    color: #a01862;
+    text-decoration: none;
+    font-size: 14px;
+
+    padding: 4px 7px;
+    border-radius: 9px;
+
+    transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+nav a:hover{
+    background: #fff7cf;
+
+    transform:
+        translateY(-4px)
+        scale(1.08);
+
+    box-shadow: 0 5px 10px rgba(230, 98, 177, 0.12);
+}
+
+/* Animasi Mengapung Halus (Floating Effect) */
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-10px); /* Bergerak ke atas sedikit */
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.profile-img, img{
+  animation: float 3s ease-in-out infinite; /* Bergerak membal terus menerus */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Denyut Lembut (Pulse Effect) untuk Teks atau Simbol Bintang */
+@keyframes softPulse{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+h1{
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+h2{
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+h3{
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+/* 1. Hilangkan format bullet & margin bawaan ul */
+.skill-wrapper ul{
+  list-style: none; /* Menghilangkan titik bullet */
+  padding: 0;
+  margin: 20px 0;
+  display: flex; /* Menyusun li menyamping secara rapi */
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Jarak antar tombol */
+  flex-wrap: wrap; /* Agar responsif di layar HP */
+}
+
+/* 2. Styling tombol untuk tag li */
+.skill-wrapper li{
+  background-color: #e2f7b1; /* Warna hijau muda pastel */
+  color: #ec439a; /* Warna teks magenta tua */
+  padding: 12px 22px;
+  border-radius: 30px; /* Bentuk kapsul/oval */
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  
+  /* Supaya bentuk tombol tetap rapi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Animasi Mengapung (Floating) */
+  animation: floatCute 3s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Variasi waktu animasi mengapung (bergantian/bergelombang) */
+.skill-wrapper li:nth-child(1) { animation-delay: 0s; }
+.skill-wrapper li:nth-child(2) { animation-delay: 0.3s; }
+.skill-wrapper li:nth-child(3) { animation-delay: 0.6s; }
+.skill-wrapper li:nth-child(4) { animation-delay: 0.9s; }
+.skill-wrapper li:nth-child(5) { animation-delay: 1.2s; }
+
+/* Keyframe Animasi Mengapung Naik-Turun Halus */
+@keyframes floatCute{
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px); /* Bergerak ke atas sedikit */
+  }
+}
+
+/* Efek Lucu saat Kursor Diatas Tombol (Hover) */
+.skill-wrapper li:hover{
+  transform: scale(1.12) rotate(-3deg) !important; /* Membesar & miring sedikit */
+  background-color: #eef7b8; /* Warna jadi lebih cerah */
+  box-shadow: 0px 8px 18px rgba(252, 251, 252, 0.4); /* Bayangan glowing pink */
+}
+
+/* Efek Membal Lucu saat Dipencet/Diklik (Active) */
+.skill-wrapper li:active{
+  transform: scale(0.92) rotate(2deg) !important; /* Membal mengecil */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling Utama Foto Profil + Gliter Glow */
+img[src*="maca.jpeg"] {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 4px solid #e2f7b1; 
+  cursor: pointer;
+
+  /* Animasi Mengapung + Gliter Berkelip */
+  animation: floatProfile 3.5s ease-in-out infinite, 
+             glitterSparkle 2s ease-in-out infinite alternate;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Keyframe Animasi Mengapung Naik-Turun */
+@keyframes floatProfile{
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.03);
+  }
+}
+
+/* Keyframe Animasi Gliter Kelap-Kelip (Sparkle Effect) */
+@keyframes glitterSparkle{
+  0%{
+    /* Pancaran cahaya & titik gliter halus di sekeliling foto */
+    box-shadow: 
+      0 0 15px rgba(226, 247, 177, 0.8),
+      -12px -12px 0 -4px #fff,
+      15px -10px 0 -3px #ffd1dc,
+      -15px 15px 0 -4px #e2f7b1,
+      12px 12px 0 -3px #fff;
+  }
+  50%{
+    /* Gliter berpindah intensitas & membesar (efek bercahaya) */
+    box-shadow: 
+      0 0 25px rgba(218, 112, 214, 0.6),
+      -15px -15px 0 -2px #ffd1dc,
+      18px -12px 0 -5px #fff,
+      -12px 18px 0 -2px #fff,
+      15px 15px 0 -5px #e2f7b1;
+  }
+  100%{
+    /* Posisi gliter redup-terang bergantian */
+    box-shadow: 
+      0 0 20px rgba(226, 247, 177, 0.9),
+      -10px -15px 0 -5px #fff,
+      12px -15px 0 -2px #e2f7b1,
+      -18px 10px 0 -5px #ffd1dc,
+      10px 18px 0 -2px #fff;
+  }
+}
+
+/* Saat Kursor Diarahin (Hover): Gliter & Glow Makin Terang Nyala */
+img[src*="maca.jpeg"]:hover {
+  box-shadow: 
+    0 0 30px rgba(226, 247, 177, 1),
+    -18px -18px 0 -2px #fff,
+    20px -15px 0 -2px #ffd1dc,
+    -20px 20px 0 -2px #e2f7b1,
+    18px 18px 0 -2px #fff !important;
+}
+
+p{
+    margin: 1;
+    padding: 0;
+}
+
+a{
+  color: #8b1853;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #8b1853;
+  transition: width 0.3s ease;
+}
+
+a:hover::after{
+  width: 100%;
+}
+
+/* Styling Judul Utama */
+#judul {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+/* Styling Hey, you found me! (Memastikan Berdiri Sendiri di Bawah Judul) */
+p.greeting-sub{
+  display: block; /* Menjamin mengambil 1 baris sendiri */
+  width: fit-content;
+  margin: 10px auto 20px auto; /* Meratakan ke tengah & memberi jarak ke menu bawah */
+  
+  background: rgba(255, 255, 255, 0.65);
+  color: #8b1853;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1.5px solid rgba(226, 247, 177, 0.9);
+  box-shadow: 0 4px 12px rgba(218, 112, 214, 0.15);
+  
+  animation: floatGreeting 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Keyframe Animasi Float Halus */
+@keyframes floatGreeting{
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Styling Menu Navigasi */
+nav .menu{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
