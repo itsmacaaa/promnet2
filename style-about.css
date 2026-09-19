@@ -343,3 +343,27 @@ h2{
 .edu-card {
   animation: borderGlow 3s infinite ease-in-out;
 }
+
+/* Aturan khusus untuk layar smartphone (lebar di bawah 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  /* Menyesuaikan ukuran judul agar tidak terlalu besar */
+  #judul, h1 {
+    font-size: 24px;
+  }
+
+  /* Mengatur navigasi agar muat di HP */
+  nav {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  /* Mengatur item skill agar fleksibel */
+  ul, .skill-wrapper ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
