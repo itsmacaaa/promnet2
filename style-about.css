@@ -20,7 +20,7 @@ body{
 }
 
 .konten-about {
-    max-width: 750px;
+    max-width: 800px;
     margin: 30px auto;
     padding: 0 20px;
     display: flex;
@@ -301,12 +301,12 @@ nav a:after {
 
 
 nav a:hover::after {
-    width: 70%;               
+    width: 90%;               
 }
 
 
 nav a.active::after {
-    width: 70%;
+    width: 90%;
 }
 
 nav .menu{
@@ -321,7 +321,7 @@ h2{
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .hobby-list {
         grid-template-columns: 1fr;
     }
@@ -338,32 +338,23 @@ h2{
   }
 }
 
-.data-section,
-.hobby-card,
-.edu-card {
-  animation: borderGlow 3s infinite ease-in-out;
+.container-about, 
+.container-history {
+  width: 90%;
+  max-width: 800px; 
+  margin: 0 auto; 
 }
 
-/* Aturan khusus untuk layar smartphone (lebar di bawah 768px) */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  /* Menyesuaikan ukuran judul agar tidak terlalu besar */
-  #judul, h1 {
-    font-size: 24px;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  /* Mengatur navigasi agar muat di HP */
-  nav {
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  /* Mengatur item skill agar fleksibel */
-  ul, .skill-wrapper ul {
-    flex-direction: column;
-    align-items: center;
-  }
+.card-item {
+  width: 100%;
+  padding: 15px;
 }

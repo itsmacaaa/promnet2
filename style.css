@@ -361,3 +361,24 @@ nav .menu{
   gap: 15px;
   margin-bottom: 20px;
 }
+
+.container-about, 
+.container-history {
+  width: 90%;
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card-item {
+  width: 100%;
+  padding: 15px;
+}

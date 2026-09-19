@@ -258,6 +258,26 @@ h5 {
 .history-card:hover h3,
 .history-card:hover h4,
 .history-card:hover p {
-  
   color: rgb(237, 252, 186);
+}
+
+.container-about, 
+.container-history {
+  width: 90%;
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card-item {
+  width: 100%;
+  padding: 15px;
 }
