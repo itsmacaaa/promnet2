@@ -1,0 +1,368 @@
+*{
+    margin: 1;
+    padding: 0;
+}
+
+#judul{
+    font-size: 40px;
+}
+
+p{
+    font-family: garamond;
+    font-size: x-large;
+}
+
+body{
+    background-color: rgb(244, 187, 215);
+    color: rgb(152, 21, 97);
+    line-height: 1.6;
+    font-family: georgia;
+}
+
+.konten-about {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.data-section,
+.hobby-card,
+.edu-card {
+    background-color: rgb(237, 252, 189); 
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 2px rgb(232, 228, 228);
+    border: 2px solid #e983a9;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.data-section h2,
+.hobby-card h2,
+.edu-card h2 {
+    color: rgb(152, 21, 97);
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Styling Judul Utama */
+#judul {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+/* ================= 3. STYLING TABEL DATA DIRI ================= */
+.tabel {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #8b1e3f;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff; /* Latar putih tabel */
+}
+
+.tabel th {
+    background-color: rgb(152, 21, 97);
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid #d4a3b3;
+    border-right: 1px solid #d4a3b3;
+}
+
+.tabel td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #d4a3b3;
+    border-right: 1px solid #d4a3b3;
+    color: rgb(152, 21, 97);
+}
+
+.tabel th:last-child,
+.tabel td:last-child {
+    border-right: none;
+}
+
+.tabel tr:last-child td {
+    border-bottom: none;
+}
+
+.tabel td:first-child {
+    font-weight: 600;
+    color: rgb(152, 21, 97);
+}
+
+.tabel a {
+    color: rgb(152, 21, 97);
+    text-decoration: underline;
+}
+
+/* ================= 4. STYLING HOBI ================= */
+.hobby-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hobby-card li {
+    background-color: #ffffff;
+    color: rgb(152, 21, 97);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #d4a3b3;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+/* ================= 5. STYLING PENDIDIKAN ================= */
+.edu-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.edu-card li {
+    background-color: #ffffff;
+    color: rgb(152, 21, 97);
+    padding: 12px 20px;
+    border-radius: 10px;
+    border-bottom: 2px dashed #e983a9;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+nav a:hover{
+    background: #fff7cf;
+
+    transform:
+        translateY(-4px)
+        scale(1.08);
+
+    box-shadow: 0 5px 10px rgba(230, 98, 177, 0.12);
+}
+
+
+
+/* ================= EFEK ANIMASI ABOUT ================= */
+
+/* 1. Atur Animasi Muncul (Fade In + Slide Up) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Muncul dari agak bawah */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Terapkan Animasi ke Container & Kartu */
+.konten-about {
+    animation: fadeInUp 0.8s ease-out; /* Durasi muncul 0.8 detik */
+}
+
+/* 3. Efek Hover: Kotak terangkat & bayangan makin halus saat kursor menempel */
+.data-section,
+.hobby-card,
+.edu-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus */
+}
+
+.data-section:hover,
+.hobby-card:hover,
+.edu-card:hover {
+    transform: translateY(-5px); /* Terangkat 5px ke atas */
+    box-shadow: 0 8px 15px rgba(233, 131, 169, 0.3); /* Bayangan pink lebih lembut */
+}
+
+/* 4. Efek Hover pada Item List Hobi & Pendidikan */
+.hobby-card li,
+.edu-card li {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hobby-card li:hover,
+.edu-card li:hover {
+    transform: scale(1.02); /* Sedikit membesar saat ditunjuk */
+    background-color: #fff5f8; /* Berubah warna tipis */
+}/* Definisi Gerakan Melayang Naik-Turun */
+@keyframes floatJudul {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px); /* Terangkat 8px ke atas */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Terapkan ke semua Judul H2 (A Little About Me, Things I Enjoy, My Education Journey) */
+.data-section h2,
+.hobby-card h2,
+.edu-card h2 {
+    display: inline-block; /* Wajib agar elemen bisa bergerak */
+    animation: floatJudul 2.5s ease-in-out infinite; /* Bergerak membal terus-menerus */
+}
+
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03); /* Agak membesar sedikit */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Terapkan ke teks pembuka atas */
+.konten-about p {
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.data-section:hover,
+.hobby-card:hover,
+.edu-card:hover {
+    transform: translateY(-6px) scale(1.01); /* Terangkat + sedikit membesar */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek membal elastis */
+}
+
+/* ================= 1. JUDUL & TEKS SAMBUTAN ================= */
+
+/* Animasi Denyut Lembut (Pulse Effect) */
+@keyframes softPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+#judul, 
+.data-section h2, 
+.hobby-card h2, 
+.edu-card h2 {
+    text-align: center;
+    color: rgb(152, 21, 97);
+    animation: softPulse 2.5s ease-in-out infinite;
+}
+
+/* ================= 2. MENU NAVIGASI ================= */
+
+.menu {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: inline-flex;
+    gap: 8px;
+    background: #efffba;
+    padding: 8px 14px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(140, 40, 90, 0.08);
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    position: relative; /* Wajib ada supaya garis bawahnya pas di menu */
+    color: #a01862;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 9px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;               /* Ketebalan garis */
+    bottom: 2px;              /* Jarak dari teks */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8b1853; /* Warna garis bawah */
+    transition: width 0.3s ease;
+}
+
+/* Efek pas kursor disentuhkan (Hover): Garis Melebar */
+nav a:hover::after {
+    width: 70%;               /* Panjang garis pas ditunjuk kursor */
+}
+
+/* Kalau mau menu aktif (misal Home) garisnya nempel terus */
+nav a.active::after {
+    width: 70%;
+}
+
+
+/* Styling Menu Navigasi */
+nav .menu{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+h2{
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+/* Responsif HP */
+@media (max-width: 500px) {
+    .hobby-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 1. Atur Efek Kelap-Kelip Border */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: #f8bbd0;
+    box-shadow: 0 0 8px rgba(248, 187, 208, 0.5);
+  }
+  50% {
+    border-color: #800040;
+    box-shadow: 0 0 15px rgba(128, 109, 0, 0.4);
+  }
+}
+
+/* 2. Pasang ke Container Tabel */
+.data-section,
+.hobby-card,
+.edu-card {
+  animation: borderGlow 3s infinite ease-in-out;
+}

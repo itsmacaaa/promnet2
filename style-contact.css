@@ -1,0 +1,356 @@
+* {
+  margin: 5;
+  padding: 0;
+}
+
+body{
+    background-color: rgb(244, 187, 215);
+    color: rgb(152, 21, 97);
+    line-height: 1.6;
+    font-family: georgia;
+}
+
+#judul {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+
+p{
+    font-family: garamond;
+    font-size: x-large;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: inline-flex;
+    gap: 8px;
+    background: rgb(237, 252, 189); 
+    padding: 8px 14px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(140, 40, 90, 0.08);
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    position: relative; /* Wajib ada supaya garis bawahnya pas di menu */
+    color: rgb(152, 21, 97);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 9px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;               /* Ketebalan garis */
+    bottom: 2px;              /* Jarak dari teks */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(152, 21, 97); /* Warna garis bawah */
+    transition: width 0.3s ease;
+}
+
+/* Efek pas kursor disentuhkan (Hover): Garis Melebar */
+nav a:hover::after {
+    width: 70%;               /* Panjang garis pas ditunjuk kursor */
+}
+
+/* Kalau mau menu aktif (misal Home) garisnya nempel terus */
+nav a.active::after {
+    width: 70%;
+}
+
+
+/* Styling Menu Navigasi */
+nav .menu{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+h2, h3, h5, p {
+  text-align: center;
+}
+
+h2 {
+  color: rgb(152, 21, 97);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+a {
+  color: rgb(152, 21, 97);
+}
+
+/* CONTAINER FORM PESAN */
+.form-container {
+  background-color: rgb(237, 252, 189); 
+  border-radius: 28px;
+  padding: 35px 40px;
+  border: 2px solid #f8bbd0;
+  box-shadow: 0 12px 30px rgba(152, 21, 97, 0.07);
+  max-width: 820px;
+  margin: 30px auto;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-header {
+  background-color: rgb(152, 21, 97);
+  color: rgb(152, 21, 97);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(248, 187, 208, 0.5);
+}
+
+.form-header h3 {
+  color: rgb(152, 21, 97);
+  font-size: 24px;
+  margin: 0;
+  font-family: Garamond, serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.form-divider {
+  border: none;
+  height: 1.5px;
+  background: linear-gradient(to right, #f8bbd0, #f48fb1, #f8bbd0);
+  margin: 18px 0 28px 0;
+}
+
+/* GRID 2 KOLOM RAPI & ELEGANT */
+form.grid-form {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 22px 35px !important;
+  text-align: left !important;
+}
+
+.form-item {
+  display: flex !important;
+  align-items: flex-end !important; /* Menyelaraskan icon dengan input box */
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+.field-icon {
+  background-color: rgb(152, 21, 97);
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 2px;
+  box-shadow: 0 3px 8px rgba(152, 21, 97, 0.08);
+}
+
+.field-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-content label {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(152, 21, 97);
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* POLESAN INPUT, SELECT, TEXTAREA */
+.field-content input[type="text"],
+.field-content input[type="email"],
+.field-content input[type="date"],
+.field-content select,
+.field-content textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #f8bbd0;
+  border-radius: 14px;
+  box-sizing: border-box;
+  font-family: Garamond, serif;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #4a0e2e;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Efek saat kolom input diklik/difokuskan */
+.field-content input:focus,
+.field-content select:focus,
+.field-content textarea:focus {
+  border-color: rgb(152, 21, 97);
+  background-color:rgb(237, 252, 189); ;
+  box-shadow: 0 0 0 3px rgba(152, 21, 97, 0.15);
+}
+
+/* RADIO BUTTON AESTHETIC */
+.radio-inline {
+  display: flex;
+  gap: 18px;
+  padding-top: 8px;
+  align-items: center;
+}
+
+.radio-inline label {
+  font-weight: 500;
+  color: rgb(152, 21, 97);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.radio-inline input[type="radio"] {
+  accent-color: rgb(152, 21, 97);
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+/* TOMBOL AKSI PILL & HOVER ANIMATION */
+.form-actions {
+  grid-column: span 2 !important;
+  display: flex !important;
+  gap: 16px !important;
+  margin-top: 15px !important;
+}
+
+.btn-kirim, .btn-bersihkan {
+  padding: 10px 28px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  font-family: Garamond, serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-kirim {
+  background-color: rgb(152, 21, 97);
+  color: rgb(237, 252, 189); 
+  box-shadow: 0 4px 12px rgba(152, 21, 97, 0.25);
+}
+
+.btn-kirim:hover {
+  background-color: rgb(152, 21, 97);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(152, 21, 97, 0.35);
+}
+
+.btn-bersihkan {
+  background-color: #f8bbd0;
+  color:rgb(152, 21, 97);
+  box-shadow: 0 4px 10px rgba(248, 187, 208, 0.4);
+}
+
+.btn-bersihkan:hover {
+  background-color: #f48fb1;
+  transform: translateY(-2px);
+}
+
+.info-section {
+  text-align: center;
+  margin: 20px 0 30px 0;
+}
+
+.info-section h3 {
+  color: rgb(152, 21, 97);
+  font-size: 20px;
+  font-family: Garamond, serif;
+  margin-bottom: 12px;
+}
+
+/* BUNGKUSAN PILL EMAIL PERSIS SEPERTI GAMBAR */
+.email-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(237, 252, 189); /* Krem pastel soft */
+  border: 1.5px solid #e6ee9c; /* Border hijau-kuning lembut pas di tepi badge */
+  padding: 8px 24px;
+  border-radius: 30px; /* Bentuk pill oval melengkung sempurna */
+  color: rgb(152, 21, 97); /* Warna teks maroon/pink pekat */
+  text-decoration: none;
+  font-family: Garamond, serif;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(152, 21, 97, 0.1); /* Bayangan soft */
+  transition: all 0.3s ease;
+}
+
+/* EFEK SAAT DITUNJUK MOUSE */
+.email-pill:hover {
+  background-color: #ffffff;
+  border-color: #f8bbd0;
+  transform: translateY(-2px); /* Efek naik dikit */
+  box-shadow: 0 6px 16px rgba(152, 21, 97, 0.2);
+}
+
+.pill-sparkle {
+  color: rgb(152, 21, 97);
+  font-size: 14px;
+}
+
+/* ANIMASI BERGERAK / MEMBAL (BOUNCE) */
+@keyframes floatBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* JUDUL CONTACT ME (DIBUAT BLOCK AGAR TIDAK MENABRAK MENU) */
+#judul, 
+.menu h1 {
+  display: block !important; /* Paksa baris sendiri */
+  margin-bottom: 15px;
+  animation: floatBounce 2.5s ease-in-out infinite;
+}
+
+/* LEST CONNECT */
+.intro-section h2,
+.info-section h3,
+.hero-title {
+  display: block !important; /* Paksa baris sendiri */
+  margin: 0 auto 10px auto;
+  animation: floatBounce 3s ease-in-out infinite;
+  animation-delay: 0.3s;
+}

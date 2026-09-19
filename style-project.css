@@ -1,0 +1,331 @@
+*{
+   margin: 1;
+   padding: 0; 
+}
+
+#judul{
+    font-size: 40px;
+}
+
+body{
+    background-color: rgb(244, 187, 215);
+    color: rgb(152, 21, 97);
+    line-height: 1.6;
+    font-family: georgia;
+}
+
+p{
+    font-family: garamond;
+    font-size: x-large;
+    text-align: center;
+}
+
+h3{
+    font-size: x-large;
+    text-align: center;
+}
+
+/* Container Kotak Grid 2 Kolom */
+.konten-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;            /* Jarak antar kartu sedikit diperbesar */
+  width: 95%;           /* Mengikuti lebar layar browser */
+  max-width: 1000px;    /* Diperlebar dari 800px ke 1100px */
+  margin: 30px auto;    /* Posisinya tetap presisi di tengah */
+}
+
+.img-project {
+  width: 100%;
+  height: 300px;        /* Tinggi gambar disesuaikan agar proporsional */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.icon-project {
+  font-size: 100px;
+  text-align: center;
+  margin: 8px 0;
+}
+
+/* Badge Teknologi Kapsul */
+.list-teknologi {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ffffff;
+  color: rgb(152, 21, 97);
+  border: 1.5px solid rgb(152, 21, 97);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 3px;
+}
+
+/* Tabel dengan Bingkai Outer Kuning Pastel & Border Pink */
+.tabel-about {
+  width: 100%;
+  max-width: 850px;             /* Lebar disamakan dengan kartu project */
+  margin: 30px auto;
+  border-collapse: separate;    /* Diubah dari collapse agar border-radius berfungsi rapi */
+  border-spacing: 0;
+  border: 2px solid #f8bbd0;     /* Garis tepi pink soft */
+  border-radius: 15px;          /* Sudut melengkung halus */
+  padding: 30px;                /* Jarak/ruang antara tepi kuning dan isi tabel */
+}
+
+.tabel-about tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.tabel-about tbody tr:hover td {
+  background-color: rgb(237, 252, 186); /* Warna kuning sangat muda saat baris ditunjuk */
+}
+
+/* Bingkai Kuning Outer */
+.container-tabel {
+  background-color: rgb(237, 252, 186);
+  border: 2px solid #f8bbd0;
+  border-radius: 20px;
+  padding: 25px 20px;
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+/* Styling khusus judul di dalam container tabel */
+.container-tabel .judul-section {
+  color: #800040;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Styling Header Tabel (Atas) */
+.tabel-about th {
+  background-color: rgb(152, 21, 97);    /* Warna maroon pastel */
+  color: #ffffff;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #f8bbd0;
+}
+
+/* Lengkungan Sudut Atas Header */
+.tabel-about tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+.tabel-about tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* Styling Isi Sel Tabel */
+.tabel-about td {
+  padding: 10px;
+  background-color: #ffffff;    /* Warna latar dalam sel putih bersih agar kontras */
+  border: 1px solid #f8bbd0;     /* Garis antar sel berwarna pink soft */
+  font-size: 0.85rem;
+}
+
+/* Lengkungan Sudut Bawah Sel */
+.tabel-about tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+.tabel-about tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.container-tabel {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-tabel:hover {
+  transform: translateY(-5px); /* Container naik 5px */
+  box-shadow: 0 10px 25px rgba(128, 0, 64, 0.12);
+}
+
+.tabel-about tbody tr {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tabel-about tbody tr:hover {
+  transform: scale(1.01); /* Baris sedikit membesar */
+  box-shadow: 0 4px 10px rgba(128, 0, 64, 0.1); /* Bayangan maroon tipis */
+}
+
+.card-project {
+  background-color: rgb(237, 252, 186);
+  border: 2px solid #f8bbd0;
+  border-radius: 15px;
+  padding: 15px;
+  
+  /* Efek Transisi Halus */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Saat Kursor Diarahkan ke Kartu */
+.card-project:hover {
+  transform: translateY(-8px); /* Kartu naik 8px ke atas */
+  box-shadow: 0 8px 20px rgba(128, 0, 64, 0.15); /* Bayangan maroon soft */
+  border-color: #f48fb1; /* Warna border sedikit lebih tegas */
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #800040;
+  border: 1.5px solid #800040;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 3px;
+  
+  /* Transisi Animasi */
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+/* Saat Kursor Diarahkan ke Badge */
+.badge:hover {
+  background-color: #800040; /* Latar berubah maroon */
+  color: #ffffff;            /* Teks berubah putih */
+  transform: scale(1.08);    /* Membesar 8% */
+}
+
+.img-project {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  
+  /* Transisi Zoom */
+  transition: transform 0.3s ease;
+}
+
+.card-project:hover .img-project {
+  transform: scale(1.02); /* Gambar sedikit membesar saat kartunya di-hover */
+}
+
+.menu {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+@keyframes softPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+#judul, 
+h3,
+h2, 
+.list-teknologi{
+    text-align: center;
+    color: rgb(152, 21, 97);
+    animation: softPulse 2.5s ease-in-out infinite;
+}
+
+nav {
+    display: inline-flex;
+    gap: 8px;
+    background: #efffba;
+    padding: 8px 14px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(140, 40, 90, 0.08);
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    position: relative; /* Wajib ada supaya garis bawahnya pas di menu */
+    color: #a01862;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 9px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;               /* Ketebalan garis */
+    bottom: 2px;              /* Jarak dari teks */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8b1853; /* Warna garis bawah */
+    transition: width 0.3s ease;
+}
+
+/* Efek pas kursor disentuhkan (Hover): Garis Melebar */
+nav a:hover::after {
+    width: 70%;               /* Panjang garis pas ditunjuk kursor */
+}
+
+/* Kalau mau menu aktif (misal Home) garisnya nempel terus */
+nav a.active::after {
+    width: 70%;
+}
+
+
+/* Styling Menu Navigasi */
+nav .menu{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 1. Atur Efek Kelap-Kelip */
+@keyframes kelapKelip {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 2px #f8bbd0;
+  }
+  50% {
+    opacity: 0.3;
+    text-shadow: 0 0 10px #f48fb1, 0 0 15px #800040;
+  }
+}
+
+/* 2. Pasang di Judul Section */
+.container-tabel .judul-section {
+  animation: kelapKelip 2s infinite ease-in-out;
+}
+
+/* 3. Pasang di Tulisan Completed Dalam Tabel */
+.tabel-about td:last-child {
+  animation: kelapKelip 2.5s infinite ease-in-out;
+}
+
+/* 1. Atur Efek Kelap-Kelip Border */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: #f8bbd0;
+    box-shadow: 0 0 8px rgba(248, 187, 208, 0.5);
+  }
+  50% {
+    border-color: #800040;
+    box-shadow: 0 0 15px rgba(128, 0, 64, 0.4);
+  }
+}
+
+/* 2. Pasang ke Container Tabel */
+.container-tabel {
+  animation: borderGlow 3s infinite ease-in-out;
+}

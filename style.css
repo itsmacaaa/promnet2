@@ -5,6 +5,7 @@
 
 #judul{
     font-size: 40px;
+
 }
 
 p{
@@ -106,16 +107,36 @@ nav{
 }
 
 nav a{
+    position: relative; /* Wajib ada supaya garis bawahnya pas di menu */
     color: #a01862;
     text-decoration: none;
-    font-size: 14px;
-
-    padding: 4px 7px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
     border-radius: 9px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
 
-    transition:
-    transform .25s ease,
-    box-shadow .25s ease;
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;               /* Ketebalan garis */
+    bottom: 2px;              /* Jarak dari teks */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8b1853; /* Warna garis bawah */
+    transition: width 0.3s ease;
+}
+
+/* Efek pas kursor disentuhkan (Hover): Garis Melebar */
+nav a:hover::after {
+    width: 70%;               /* Panjang garis pas ditunjuk kursor */
+}
+
+/* Kalau mau menu aktif (misal Home) garisnya nempel terus */
+nav a.active::after {
+    width: 70%;
 }
 
 nav a:hover{
@@ -186,7 +207,7 @@ h3{
 /* 2. Styling tombol untuk tag li */
 .skill-wrapper li{
   background-color: #e2f7b1; /* Warna hijau muda pastel */
-  color: #ec439a; /* Warna teks magenta tua */
+  color: rgb(181, 26, 104); /* Warna teks magenta tua */
   padding: 12px 22px;
   border-radius: 30px; /* Bentuk kapsul/oval */
   font-size: 15px;
