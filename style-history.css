@@ -281,3 +281,24 @@ img {
   width: 100%;
   padding: 15px;
 }
+
+/* Media Query Khusus Perangkat Mobile */
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
+    
+    .navbar {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .profile-frame {
+        width: 130px;
+        height: 130px;
+    }
+
+    .bio-text {
+        font-size: 0.9rem;
+    }
+}

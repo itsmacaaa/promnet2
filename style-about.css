@@ -338,6 +338,12 @@ h2{
   }
 }
 
+.data-section,
+.hobby-card,
+.edu-card {
+  animation: borderGlow 3s infinite ease-in-out;
+}
+
 .container-about, 
 .container-history {
   width: 90%;
@@ -345,16 +351,22 @@ h2{
   margin: 0 auto; 
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
+    
+    .navbar {
+        width: 100%;
+        border-radius: 12px;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    .profile-frame {
+        width: 130px;
+        height: 130px;
+    }
 
-.card-item {
-  width: 100%;
-  padding: 15px;
+    .bio-text {
+        font-size: 0.9rem;
+    }
 }
