@@ -107,7 +107,7 @@ nav{
 }
 
 nav a{
-    position: relative; /* Wajib ada supaya garis bawahnya pas di menu */
+    position: relative; 
     color: #a01862;
     text-decoration: none;
     font-size: 15px;
@@ -121,20 +121,18 @@ nav a:after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;               /* Ketebalan garis */
-    bottom: 2px;              /* Jarak dari teks */
+    height: 2px;               
+    bottom: 2px;             
     left: 50%;
     transform: translateX(-50%);
-    background-color: #8b1853; /* Warna garis bawah */
+    background-color: #8b1853; 
     transition: width 0.3s ease;
 }
 
-/* Efek pas kursor disentuhkan (Hover): Garis Melebar */
 nav a:hover::after {
-    width: 70%;               /* Panjang garis pas ditunjuk kursor */
+    width: 70%;              
 }
 
-/* Kalau mau menu aktif (misal Home) garisnya nempel terus */
 nav a.active::after {
     width: 70%;
 }
@@ -149,13 +147,12 @@ nav a:hover{
     box-shadow: 0 5px 10px rgba(230, 98, 177, 0.12);
 }
 
-/* Animasi Mengapung Halus (Floating Effect) */
 @keyframes float{
   0%{
     transform: translateY(0px);
   }
   50%{
-    transform: translateY(-10px); /* Bergerak ke atas sedikit */
+    transform: translateY(-10px);
   }
   100%{
     transform: translateY(0px);
@@ -163,11 +160,10 @@ nav a:hover{
 }
 
 .profile-img, img{
-  animation: float 3s ease-in-out infinite; /* Bergerak membal terus menerus */
+  animation: float 3s ease-in-out infinite; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efek Denyut Lembut (Pulse Effect) untuk Teks atau Simbol Bintang */
 @keyframes softPulse{
   0%{
     transform: scale(1);
@@ -192,71 +188,60 @@ h3{
   animation: softPulse 2s ease-in-out infinite;
 }
 
-/* 1. Hilangkan format bullet & margin bawaan ul */
 .skill-wrapper ul{
-  list-style: none; /* Menghilangkan titik bullet */
+  list-style: none; 
   padding: 0;
   margin: 20px 0;
-  display: flex; /* Menyusun li menyamping secara rapi */
+  display: flex; 
   justify-content: center;
   align-items: center;
-  gap: 15px; /* Jarak antar tombol */
-  flex-wrap: wrap; /* Agar responsif di layar HP */
+  gap: 15px; 
+  flex-wrap: wrap; 
 }
 
-/* 2. Styling tombol untuk tag li */
 .skill-wrapper li{
-  background-color: #e2f7b1; /* Warna hijau muda pastel */
-  color: rgb(181, 26, 104); /* Warna teks magenta tua */
+  background-color: #e2f7b1; 
+  color: rgb(181, 26, 104); 
   padding: 12px 22px;
-  border-radius: 30px; /* Bentuk kapsul/oval */
+  border-radius: 30px; 
   font-size: 15px;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
   user-select: none;
-  
-  /* Supaya bentuk tombol tetap rapi */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Animasi Mengapung (Floating) */
   animation: floatCute 3s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Variasi waktu animasi mengapung (bergantian/bergelombang) */
 .skill-wrapper li:nth-child(1) { animation-delay: 0s; }
 .skill-wrapper li:nth-child(2) { animation-delay: 0.3s; }
 .skill-wrapper li:nth-child(3) { animation-delay: 0.6s; }
 .skill-wrapper li:nth-child(4) { animation-delay: 0.9s; }
 .skill-wrapper li:nth-child(5) { animation-delay: 1.2s; }
 
-/* Keyframe Animasi Mengapung Naik-Turun Halus */
 @keyframes floatCute{
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-8px); /* Bergerak ke atas sedikit */
+    transform: translateY(-8px); 
   }
 }
 
-/* Efek Lucu saat Kursor Diatas Tombol (Hover) */
 .skill-wrapper li:hover{
-  transform: scale(1.12) rotate(-3deg) !important; /* Membesar & miring sedikit */
-  background-color: #eef7b8; /* Warna jadi lebih cerah */
-  box-shadow: 0px 8px 18px rgba(252, 251, 252, 0.4); /* Bayangan glowing pink */
+  transform: scale(1.12) rotate(-3deg) !important; 
+  background-color: #eef7b8; 
+  box-shadow: 0px 8px 18px rgba(252, 251, 252, 0.4); 
 }
 
-/* Efek Membal Lucu saat Dipencet/Diklik (Active) */
 .skill-wrapper li:active{
-  transform: scale(0.92) rotate(2deg) !important; /* Membal mengecil */
+  transform: scale(0.92) rotate(2deg) !important; 
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling Utama Foto Profil + Gliter Glow */
 img[src*="maca.jpeg"] {
   display: block;
   margin: 20px auto;
@@ -264,13 +249,11 @@ img[src*="maca.jpeg"] {
   border: 4px solid #e2f7b1; 
   cursor: pointer;
 
-  /* Animasi Mengapung + Gliter Berkelip */
   animation: floatProfile 3.5s ease-in-out infinite, 
              glitterSparkle 2s ease-in-out infinite alternate;
   transition: box-shadow 0.3s ease;
 }
 
-/* Keyframe Animasi Mengapung Naik-Turun */
 @keyframes floatProfile{
   0%, 100% {
     transform: translateY(0px) scale(1);
@@ -280,10 +263,8 @@ img[src*="maca.jpeg"] {
   }
 }
 
-/* Keyframe Animasi Gliter Kelap-Kelip (Sparkle Effect) */
 @keyframes glitterSparkle{
   0%{
-    /* Pancaran cahaya & titik gliter halus di sekeliling foto */
     box-shadow: 
       0 0 15px rgba(226, 247, 177, 0.8),
       -12px -12px 0 -4px #fff,
@@ -292,7 +273,6 @@ img[src*="maca.jpeg"] {
       12px 12px 0 -3px #fff;
   }
   50%{
-    /* Gliter berpindah intensitas & membesar (efek bercahaya) */
     box-shadow: 
       0 0 25px rgba(218, 112, 214, 0.6),
       -15px -15px 0 -2px #ffd1dc,
@@ -301,7 +281,6 @@ img[src*="maca.jpeg"] {
       15px 15px 0 -5px #e2f7b1;
   }
   100%{
-    /* Posisi gliter redup-terang bergantian */
     box-shadow: 
       0 0 20px rgba(226, 247, 177, 0.9),
       -10px -15px 0 -5px #fff,
@@ -311,7 +290,6 @@ img[src*="maca.jpeg"] {
   }
 }
 
-/* Saat Kursor Diarahin (Hover): Gliter & Glow Makin Terang Nyala */
 img[src*="maca.jpeg"]:hover {
   box-shadow: 
     0 0 30px rgba(226, 247, 177, 1),
@@ -349,19 +327,16 @@ a:hover::after{
   width: 100%;
 }
 
-/* Styling Judul Utama */
 #judul {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 5px;
 }
 
-/* Styling Hey, you found me! (Memastikan Berdiri Sendiri di Bawah Judul) */
 p.greeting-sub{
-  display: block; /* Menjamin mengambil 1 baris sendiri */
+  display: block; 
   width: fit-content;
-  margin: 10px auto 20px auto; /* Meratakan ke tengah & memberi jarak ke menu bawah */
-  
+  margin: 10px auto 20px auto;
   background: rgba(255, 255, 255, 0.65);
   color: #8b1853;
   padding: 6px 20px;
@@ -370,19 +345,16 @@ p.greeting-sub{
   font-weight: 600;
   border: 1.5px solid rgba(226, 247, 177, 0.9);
   box-shadow: 0 4px 12px rgba(218, 112, 214, 0.15);
-  
   animation: floatGreeting 3s ease-in-out infinite;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-/* Keyframe Animasi Float Halus */
 @keyframes floatGreeting{
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
 
-/* Styling Menu Navigasi */
 nav .menu{
   display: flex;
   justify-content: center;

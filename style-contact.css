@@ -40,7 +40,7 @@ nav {
 }
 
 nav a{
-    position: relative; /* Wajib ada supaya garis bawahnya pas di menu */
+    position: relative; 
     color: rgb(152, 21, 97);
     text-decoration: none;
     font-size: 15px;
@@ -54,26 +54,22 @@ nav a:after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;               /* Ketebalan garis */
-    bottom: 2px;              /* Jarak dari teks */
+    height: 2px;               
+    bottom: 2px;              
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgb(152, 21, 97); /* Warna garis bawah */
+    background-color: rgb(152, 21, 97); 
     transition: width 0.3s ease;
 }
 
-/* Efek pas kursor disentuhkan (Hover): Garis Melebar */
 nav a:hover::after {
-    width: 70%;               /* Panjang garis pas ditunjuk kursor */
+    width: 70%;               
 }
 
-/* Kalau mau menu aktif (misal Home) garisnya nempel terus */
 nav a.active::after {
     width: 70%;
 }
 
-
-/* Styling Menu Navigasi */
 nav .menu{
   display: flex;
   justify-content: center;
@@ -100,7 +96,6 @@ a {
   color: rgb(152, 21, 97);
 }
 
-/* CONTAINER FORM PESAN */
 .form-container {
   background-color: rgb(237, 252, 189); 
   border-radius: 28px;
@@ -146,7 +141,6 @@ a {
   margin: 18px 0 28px 0;
 }
 
-/* GRID 2 KOLOM RAPI & ELEGANT */
 form.grid-form {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
@@ -156,7 +150,7 @@ form.grid-form {
 
 .form-item {
   display: flex !important;
-  align-items: flex-end !important; /* Menyelaraskan icon dengan input box */
+  align-items: flex-end !important; 
   gap: 12px !important;
   width: 100% !important;
 }
@@ -188,7 +182,7 @@ form.grid-form {
   letter-spacing: 0.3px;
 }
 
-/* POLESAN INPUT, SELECT, TEXTAREA */
+
 .field-content input[type="text"],
 .field-content input[type="email"],
 .field-content input[type="date"],
@@ -207,7 +201,7 @@ form.grid-form {
   transition: all 0.25s ease-in-out;
 }
 
-/* Efek saat kolom input diklik/difokuskan */
+
 .field-content input:focus,
 .field-content select:focus,
 .field-content textarea:focus {
@@ -216,7 +210,6 @@ form.grid-form {
   box-shadow: 0 0 0 3px rgba(152, 21, 97, 0.15);
 }
 
-/* RADIO BUTTON AESTHETIC */
 .radio-inline {
   display: flex;
   gap: 18px;
@@ -239,7 +232,6 @@ form.grid-form {
   cursor: pointer;
 }
 
-/* TOMBOL AKSI PILL & HOVER ANIMATION */
 .form-actions {
   grid-column: span 2 !important;
   display: flex !important;
@@ -296,29 +288,27 @@ form.grid-form {
   margin-bottom: 12px;
 }
 
-/* BUNGKUSAN PILL EMAIL PERSIS SEPERTI GAMBAR */
 .email-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: rgb(237, 252, 189); /* Krem pastel soft */
-  border: 1.5px solid #e6ee9c; /* Border hijau-kuning lembut pas di tepi badge */
+  background-color: rgb(237, 252, 189); 
+  border: 1.5px solid #e6ee9c; 
   padding: 8px 24px;
-  border-radius: 30px; /* Bentuk pill oval melengkung sempurna */
-  color: rgb(152, 21, 97); /* Warna teks maroon/pink pekat */
+  border-radius: 30px; 
+  color: rgb(152, 21, 97); 
   text-decoration: none;
   font-family: Garamond, serif;
   font-size: 15px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(152, 21, 97, 0.1); /* Bayangan soft */
+  box-shadow: 0 4px 12px rgba(152, 21, 97, 0.1); 
   transition: all 0.3s ease;
 }
 
-/* EFEK SAAT DITUNJUK MOUSE */
 .email-pill:hover {
   background-color: #ffffff;
   border-color: #f8bbd0;
-  transform: translateY(-2px); /* Efek naik dikit */
+  transform: translateY(-2px); 
   box-shadow: 0 6px 16px rgba(152, 21, 97, 0.2);
 }
 
@@ -327,7 +317,6 @@ form.grid-form {
   font-size: 14px;
 }
 
-/* ANIMASI BERGERAK / MEMBAL (BOUNCE) */
 @keyframes floatBounce {
   0%, 100% {
     transform: translateY(0);
@@ -337,19 +326,17 @@ form.grid-form {
   }
 }
 
-/* JUDUL CONTACT ME (DIBUAT BLOCK AGAR TIDAK MENABRAK MENU) */
 #judul, 
 .menu h1 {
-  display: block !important; /* Paksa baris sendiri */
+  display: block !important; 
   margin-bottom: 15px;
   animation: floatBounce 2.5s ease-in-out infinite;
 }
 
-/* LEST CONNECT */
 .intro-section h2,
 .info-section h3,
 .hero-title {
-  display: block !important; /* Paksa baris sendiri */
+  display: block !important; 
   margin: 0 auto 10px auto;
   animation: floatBounce 3s ease-in-out infinite;
   animation-delay: 0.3s;

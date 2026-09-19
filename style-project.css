@@ -25,19 +25,18 @@ h3{
     text-align: center;
 }
 
-/* Container Kotak Grid 2 Kolom */
 .konten-project {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;            /* Jarak antar kartu sedikit diperbesar */
-  width: 95%;           /* Mengikuti lebar layar browser */
-  max-width: 1000px;    /* Diperlebar dari 800px ke 1100px */
-  margin: 30px auto;    /* Posisinya tetap presisi di tengah */
+  gap: 20px;            
+  width: 95%;           
+  max-width: 1000px;    
+  margin: 30px auto;    
 }
 
 .img-project {
   width: 100%;
-  height: 300px;        /* Tinggi gambar disesuaikan agar proporsional */
+  height: 300px;      
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
@@ -49,7 +48,6 @@ h3{
   margin: 8px 0;
 }
 
-/* Badge Teknologi Kapsul */
 .list-teknologi {
   text-align: center;
   margin: 15px 0;
@@ -67,16 +65,15 @@ h3{
   margin: 3px;
 }
 
-/* Tabel dengan Bingkai Outer Kuning Pastel & Border Pink */
 .tabel-about {
   width: 100%;
-  max-width: 850px;             /* Lebar disamakan dengan kartu project */
+  max-width: 850px;             
   margin: 30px auto;
-  border-collapse: separate;    /* Diubah dari collapse agar border-radius berfungsi rapi */
+  border-collapse: separate;    
   border-spacing: 0;
-  border: 2px solid #f8bbd0;     /* Garis tepi pink soft */
-  border-radius: 15px;          /* Sudut melengkung halus */
-  padding: 30px;                /* Jarak/ruang antara tepi kuning dan isi tabel */
+  border: 2px solid #f8bbd0;    
+  border-radius: 15px;          
+  padding: 30px;              
 }
 
 .tabel-about tbody tr {
@@ -84,10 +81,9 @@ h3{
 }
 
 .tabel-about tbody tr:hover td {
-  background-color: rgb(237, 252, 186); /* Warna kuning sangat muda saat baris ditunjuk */
+  background-color: rgb(237, 252, 186);
 }
 
-/* Bingkai Kuning Outer */
 .container-tabel {
   background-color: rgb(237, 252, 186);
   border: 2px solid #f8bbd0;
@@ -97,7 +93,7 @@ h3{
   margin: 30px auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
-/* Styling khusus judul di dalam container tabel */
+
 .container-tabel .judul-section {
   color: #800040;
   text-align: center;
@@ -107,16 +103,14 @@ h3{
   margin-bottom: 20px;
 }
 
-/* Styling Header Tabel (Atas) */
 .tabel-about th {
-  background-color: rgb(152, 21, 97);    /* Warna maroon pastel */
+  background-color: rgb(152, 21, 97);    
   color: #ffffff;
   padding: 10px;
   font-size: 0.9rem;
   border: 1px solid #f8bbd0;
 }
 
-/* Lengkungan Sudut Atas Header */
 .tabel-about tr:first-child th:first-child {
   border-top-left-radius: 8px;
 }
@@ -124,15 +118,13 @@ h3{
   border-top-right-radius: 8px;
 }
 
-/* Styling Isi Sel Tabel */
 .tabel-about td {
   padding: 10px;
-  background-color: #ffffff;    /* Warna latar dalam sel putih bersih agar kontras */
-  border: 1px solid #f8bbd0;     /* Garis antar sel berwarna pink soft */
+  background-color: #ffffff;    
+  border: 1px solid #f8bbd0;     
   font-size: 0.85rem;
 }
 
-/* Lengkungan Sudut Bawah Sel */
 .tabel-about tr:last-child td:first-child {
   border-bottom-left-radius: 8px;
 }
@@ -145,7 +137,7 @@ h3{
 }
 
 .container-tabel:hover {
-  transform: translateY(-5px); /* Container naik 5px */
+  transform: translateY(-5px); 
   box-shadow: 0 10px 25px rgba(128, 0, 64, 0.12);
 }
 
@@ -154,8 +146,8 @@ h3{
 }
 
 .tabel-about tbody tr:hover {
-  transform: scale(1.01); /* Baris sedikit membesar */
-  box-shadow: 0 4px 10px rgba(128, 0, 64, 0.1); /* Bayangan maroon tipis */
+  transform: scale(1.01); 
+  box-shadow: 0 4px 10px rgba(128, 0, 64, 0.1); 
 }
 
 .card-project {
@@ -164,16 +156,14 @@ h3{
   border-radius: 15px;
   padding: 15px;
   
-  /* Efek Transisi Halus */
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
 }
 
-/* Saat Kursor Diarahkan ke Kartu */
 .card-project:hover {
-  transform: translateY(-8px); /* Kartu naik 8px ke atas */
-  box-shadow: 0 8px 20px rgba(128, 0, 64, 0.15); /* Bayangan maroon soft */
-  border-color: #f48fb1; /* Warna border sedikit lebih tegas */
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 20px rgba(128, 0, 64, 0.15); 
+  border-color: #f48fb1; 
 }
 
 .badge {
@@ -186,17 +176,14 @@ h3{
   font-size: 0.85rem;
   font-weight: bold;
   margin: 3px;
-  
-  /* Transisi Animasi */
   transition: all 0.25s ease;
   cursor: default;
-}
 
-/* Saat Kursor Diarahkan ke Badge */
+}
 .badge:hover {
-  background-color: #800040; /* Latar berubah maroon */
-  color: #ffffff;            /* Teks berubah putih */
-  transform: scale(1.08);    /* Membesar 8% */
+  background-color: #800040; 
+  color: #ffffff;            
+  transform: scale(1.08);    
 }
 
 .img-project {
@@ -205,13 +192,11 @@ h3{
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 10px;
-  
-  /* Transisi Zoom */
   transition: transform 0.3s ease;
-}
 
+}
 .card-project:hover .img-project {
-  transform: scale(1.02); /* Gambar sedikit membesar saat kartunya di-hover */
+  transform: scale(1.02); 
 }
 
 .menu {
@@ -250,7 +235,7 @@ nav {
 }
 
 nav a{
-    position: relative; /* Wajib ada supaya garis bawahnya pas di menu */
+    position: relative; 
     color: #a01862;
     text-decoration: none;
     font-size: 15px;
@@ -264,26 +249,22 @@ nav a:after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;               /* Ketebalan garis */
-    bottom: 2px;              /* Jarak dari teks */
+    height: 2px;               
+    bottom: 2px;              
     left: 50%;
     transform: translateX(-50%);
-    background-color: #8b1853; /* Warna garis bawah */
+    background-color: #8b1853; 
     transition: width 0.3s ease;
 }
 
-/* Efek pas kursor disentuhkan (Hover): Garis Melebar */
 nav a:hover::after {
-    width: 70%;               /* Panjang garis pas ditunjuk kursor */
+    width: 70%;               
 }
 
-/* Kalau mau menu aktif (misal Home) garisnya nempel terus */
 nav a.active::after {
     width: 70%;
 }
 
-
-/* Styling Menu Navigasi */
 nav .menu{
   display: flex;
   justify-content: center;
@@ -291,7 +272,6 @@ nav .menu{
   margin-bottom: 20px;
 }
 
-/* 1. Atur Efek Kelap-Kelip */
 @keyframes kelapKelip {
   0%, 100% {
     opacity: 1;
@@ -303,17 +283,14 @@ nav .menu{
   }
 }
 
-/* 2. Pasang di Judul Section */
 .container-tabel .judul-section {
   animation: kelapKelip 2s infinite ease-in-out;
 }
 
-/* 3. Pasang di Tulisan Completed Dalam Tabel */
 .tabel-about td:last-child {
   animation: kelapKelip 2.5s infinite ease-in-out;
 }
 
-/* 1. Atur Efek Kelap-Kelip Border */
 @keyframes borderGlow {
   0%, 100% {
     border-color: #f8bbd0;
@@ -325,7 +302,6 @@ nav .menu{
   }
 }
 
-/* 2. Pasang ke Container Tabel */
 .container-tabel {
   animation: borderGlow 3s infinite ease-in-out;
 }
